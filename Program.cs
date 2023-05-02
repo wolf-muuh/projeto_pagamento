@@ -1,13 +1,4 @@
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-﻿
-=======
-// See https://aka.ms/new-console-template for more information
-Console.WriteLine("Hello, World!");
->>>>>>> 51579217e5607e9738daf71cece0415b7e136160
-=======
+
 ﻿
 float ValorPago = 0;
 int Opcao = 0;
@@ -86,10 +77,4 @@ Console.WriteLine(@$"
 ░▀░▀░▀▀▀░▀░▀░▀░▀░▀▀░░▀▀▀░▀▀▀░▀▀▀░▀░▀░▀▀▀░▀▀▀░░░▀░░░▀▀▀░▀░▀░░░▀▀▀░▀▀▀░▀░▀░▀░▀░░░▀▀▀░░░▀░░░▀▀▀░▀░▀░▀░░░▀░▀░░▀░░░
 ");
 Console.ResetColor();
->>>>>>> 297f07fc677aac1ad2a57044db306096abb7242f
-=======
-﻿
->>>>>>> 10665afd357658d0966300af3bd970ef9fc85b72
-=======
-﻿
->>>>>>> 2e29e64fac294cdccaed0a715d6d040d303cf24b
+
