@@ -7,12 +7,12 @@ namespace projeto_pagamento
 {
     public abstract class Cartao
     {
-        string Bandeira;
-        string NumeroCartao;
-        string Titular;
-        string Cvv;
+        public string Bandeira;
+        public string NumeroCartao;
+        public string Titular;
+        public string Cvv;
 
-        public abstract void Pagar();
+        public abstract void Pagar(float compra);
                     
         
 
