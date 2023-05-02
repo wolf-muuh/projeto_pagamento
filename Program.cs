@@ -4,9 +4,11 @@ int Opcao = 0;
 Console.WriteLine(@$"
 *************************************
 *                                   *
-*    Você está no PixPay            *
+*      Você está no PixPay          *
 *                                   *
 *************************************");
+do
+{
 do
 {
     Console.ForegroundColor = ConsoleColor.DarkBlue;
@@ -19,8 +21,7 @@ while (ValorPago <= 0);
 Console.ForegroundColor = ConsoleColor.DarkBlue;
 Console.ResetColor();
 Console.ForegroundColor = ConsoleColor.Red;
-do
-{
+
     Console.WriteLine(@$" Escolha a forma de pagamento:
         |1|---> Boleto
         |2|---> Credito
@@ -61,7 +62,7 @@ switch (Opcao)
 Console.WriteLine(@$"
 *************************************
 *                                   *
-*Agradecemos por usar o PixPay*
+*   Agradecemos por usar o PixPay   *
 *                                   *
 *************************************");
 Console.ResetColor();
