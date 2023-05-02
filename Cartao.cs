@@ -12,14 +12,10 @@ namespace projeto_pagamento
         string Titular;
         string Cvv;
 
-        public void Pagar()
-        {
-            Console.WriteLine($"Text");
-        }
+        public abstract void Pagar();
+                    
+        
 
-        public void SalvarCartao()
-        {
-            Console.WriteLine($"Text");            
-        }
+        public abstract void Salvar(); 
     }
 }
