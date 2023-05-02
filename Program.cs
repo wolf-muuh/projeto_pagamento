@@ -2,14 +2,8 @@
 
 Credito a = new Credito();
 
-float valor = 1000f;
+float valor = 100f;
 
-bool x = a.Limitar(valor);
+a.Pagar(valor);
 
-if (x == true) {
-    Console.WriteLine($"{x}");
-}
-
-else {
-    a.Parcelar(valor);
-}
+a.Salvar();
