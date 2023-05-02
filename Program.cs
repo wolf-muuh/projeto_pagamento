@@ -63,7 +63,10 @@ switch (Opcao)
         // Console.WriteLine($"parabéns vc escolheu 0");
         break;
     default:
-        Console.WriteLine($"opcao invalida");
+        Console.WriteLine(@$"
+             *************************************
+             *        Opcao invalida             *
+             *************************************");
         break;
 }
 } while (Opcao != 1 && Opcao != 2 && Opcao != 3 && Opcao != 4 && Opcao != 0);
