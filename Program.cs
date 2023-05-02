@@ -11,7 +11,10 @@ do
 do
 {
     Console.ForegroundColor = ConsoleColor.DarkBlue;
-    Console.WriteLine(@$"Insira o valor da compra");
+    Console.WriteLine(@$"
+             *************************************
+             *    Insira o valor da compra      *
+             *************************************");
     ValorPago = float.Parse(Console.ReadLine());
     Console.ResetColor();
 }
@@ -21,12 +24,18 @@ Console.ForegroundColor = ConsoleColor.DarkBlue;
 Console.ResetColor();
 Console.ForegroundColor = ConsoleColor.Red;
 
-    Console.WriteLine(@$" Escolha a forma de pagamento:
-        |1|---> Boleto
-        |2|---> Credito
-        |3|---> Debito
-        |4|---> Cancelar Operação
-        |0|---> Sair do Sistema");
+    Console.WriteLine(@$" 
+             *************************************
+             *    Escolha a forma de pagamento:  *
+              |1|---> Boleto
+              |2|---> Credito
+              |3|---> Debito
+              |4|---> Cancelar Operação
+              |0|---> Sair do Sistema    
+             *************************************
+    
+    
+    ");
     Opcao = int.Parse(Console.ReadLine());
 
 switch (Opcao)
