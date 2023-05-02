@@ -1,13 +1,14 @@
-﻿namespace projeto_pagamento;
-
+﻿
 float ValorPago = 0;
 int Opcao = 0;
 Console.WriteLine(@$"
 *************************************
 *                                   *
-*    Você está no SEILAOQUEPay      *
+*    Você está no PixPay            *
 *                                   *
 *************************************");
+
+
 do
 {
     Console.ForegroundColor = ConsoleColor.DarkBlue;
@@ -35,14 +36,14 @@ switch (Opcao)
 {
     case 1:
         // Console.WriteLine($"parabéns vc escolheu 1");
-        Boleto Novo = new Boleto();
-        Novo.Boleto = ValorPago
+        Boleto boletoNovo = new Boleto();
+        boletoNovo.Boleto = ValorPago;
         Console.WriteLine(ValorPago);
         break;
     case 2:
         // Console.WriteLine($"parabéns vc escolheu 2");
-        Credito Novo = new Credito();
-        Novo.Credito = ValorPago
+        Credito creditoNovo = new Credito();
+        creditoNovo.Credito = ValorPago;
         Console.WriteLine(ValorPago);
         break;
     case 3:
@@ -50,7 +51,7 @@ switch (Opcao)
         break;
     case 4:
         // Console.WriteLine($"parabéns vc escolheu 4");
-        Opcao = 20
+        Opcao = 20;
         break;
     case 0:
         // Console.WriteLine($"parabéns vc escolheu 0");
@@ -63,6 +64,6 @@ switch (Opcao)
 Console.WriteLine(@$"
 *************************************
 *                                   *
-*Agradecemos por usar o SEILAOQUEPay*
+*Agradecemos por usar o PixPay*
 *                                   *
 *************************************");

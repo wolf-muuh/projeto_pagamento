@@ -1,0 +1,5 @@
+C:\Users\29321863885\Desktop\claitinho da massa\projeto_pagamento\obj\Debug\net7.0\projeto_pagamento.csproj.AssemblyReference.cache
+C:\Users\29321863885\Desktop\claitinho da massa\projeto_pagamento\obj\Debug\net7.0\projeto_pagamento.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\29321863885\Desktop\claitinho da massa\projeto_pagamento\obj\Debug\net7.0\projeto_pagamento.AssemblyInfoInputs.cache
+C:\Users\29321863885\Desktop\claitinho da massa\projeto_pagamento\obj\Debug\net7.0\projeto_pagamento.AssemblyInfo.cs
+C:\Users\29321863885\Desktop\claitinho da massa\projeto_pagamento\obj\Debug\net7.0\projeto_pagamento.csproj.CoreCompileInputs.cache
