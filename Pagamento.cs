@@ -2,7 +2,7 @@ namespace projeto_pagamento
 {
     public class Pagamento
     {
-        private DateTime Data { get; set; } = DateTime.Now;
+        private DateTime Data = DateTime.Now;
         public float Valor { get; set; }
 
         public string Cancelar()
