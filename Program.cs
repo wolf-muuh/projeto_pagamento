@@ -1,5 +1,5 @@
-﻿
- 
+﻿namespace projeto_pagamento;
+
 float ValorPago = 0;
 int Opcao = 0;
 Console.WriteLine(@$"
@@ -34,20 +34,26 @@ Console.ResetColor();
 switch (Opcao)
 {
     case 1:
-        Console.WriteLine($"parabéns vc escolheu 1");
+        // Console.WriteLine($"parabéns vc escolheu 1");
+        Boleto Novo = new Boleto();
+        Novo.Boleto = ValorPago
+        Console.WriteLine(ValorPago);
         break;
     case 2:
-        Console.WriteLine($"parabéns vc escolheu 2");
-        
+        // Console.WriteLine($"parabéns vc escolheu 2");
+        Credito Novo = new Credito();
+        Novo.Credito = ValorPago
+        Console.WriteLine(ValorPago);
         break;
     case 3:
         Console.WriteLine($"parabéns vc escolheu 3");
         break;
     case 4:
-        Console.WriteLine($"parabéns vc escolheu 4");
+        // Console.WriteLine($"parabéns vc escolheu 4");
+        Opcao = 20
         break;
     case 0:
-        Console.WriteLine($"parabéns vc escolheu 0");
+        // Console.WriteLine($"parabéns vc escolheu 0");
         break;
     default:
         Console.WriteLine($"opcao invalida");
