@@ -1,8 +1,8 @@
 namespace trabalho_em_grupo
 {
-    public class Boleto
+    public class Boleto : Pagamento
     {
-        public int CodBarras;
+        // public int CodBarras;
 
         public void Registrar()
         {
@@ -10,7 +10,7 @@ namespace trabalho_em_grupo
 
 
             Random codigodebarras = new Random();
-            Console.WriteLine(@$"O Valor a ser pago com desconto sera de {ValorPago*0.88}
+            Console.WriteLine(@$"O Valor a ser pago com desconto será de {ValorPago*0.88}
             
             
             Segue o boleto:
