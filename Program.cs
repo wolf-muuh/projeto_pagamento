@@ -1,6 +1,7 @@
 ﻿
 float ValorPago = 0;
 int Opcao = 0;
+ Console.ForegroundColor = ConsoleColor.Yellow;
 Console.WriteLine(@$"
 ░░░█░█░█▀█░█▀▀░█▀▀░░░█▀▀░█▀▀░▀█▀░█▀█░░░█▀█░█▀█░░░█▀█░▀█▀░█░█░█▀█░█▀█░█░█░░░░
 ░░░▀▄▀░█░█░█░░░█▀▀░░░█▀▀░▀▀█░░█░░█▀█░░░█░█░█░█░░░█▀▀░░█░░▄▀▄░█▀▀░█▀█░░█░░░░░
@@ -10,7 +11,7 @@ do
 {
 do
 {
-    Console.ForegroundColor = ConsoleColor.DarkBlue;
+    Console.ForegroundColor = ConsoleColor.Red;
     Console.WriteLine(@$"
              *************************************
              *    Insira o valor da compra      *
@@ -20,7 +21,7 @@ do
 }
 while (ValorPago <= 0);
 
-Console.ForegroundColor = ConsoleColor.DarkBlue;
+
 Console.ResetColor();
 Console.ForegroundColor = ConsoleColor.Red;
 
@@ -70,6 +71,7 @@ switch (Opcao)
         break;
 }
 } while (Opcao != 1 && Opcao != 2 && Opcao != 3 && Opcao != 4 && Opcao != 0);
+ Console.ForegroundColor = ConsoleColor.Yellow;
 Console.WriteLine(@$"
 ░█▀█░█▀▀░█▀▄░█▀█░█▀▄░█▀▀░█▀▀░█▀▀░█▄█░█▀█░█▀▀░░░█▀█░█▀█░█▀▄░░░█░█░█▀▀░█▀█░█▀▄░░░█▀█░░░█▀█░▀█▀░█░█░█▀█░█▀█░█░█░░
 ░█▀█░█░█░█▀▄░█▀█░█░█░█▀▀░█░░░█▀▀░█░█░█░█░▀▀█░░░█▀▀░█░█░█▀▄░░░█░█░▀▀█░█▀█░█▀▄░░░█░█░░░█▀▀░░█░░▄▀▄░█▀▀░█▀█░░█░░░
