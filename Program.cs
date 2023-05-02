@@ -1,5 +1,6 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 ﻿
 =======
 // See https://aka.ms/new-console-template for more information
@@ -85,3 +86,6 @@ Console.WriteLine(@$"
 ");
 Console.ResetColor();
 >>>>>>> 297f07fc677aac1ad2a57044db306096abb7242f
+=======
+﻿
+>>>>>>> 10665afd357658d0966300af3bd970ef9fc85b72
