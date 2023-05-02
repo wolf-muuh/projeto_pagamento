@@ -30,6 +30,9 @@ namespace projeto_pagamento
 
             do
             {
+                Console.WriteLine($"");
+                
+                Console.ForegroundColor = ConsoleColor.DarkYellow;
                 Console.Write("Voce quer parcelar no cartao:[S/N] ");
                 opcao = Console.ReadLine()!.ToUpper();
 
@@ -42,6 +45,7 @@ namespace projeto_pagamento
                     Console.ResetColor();
                 }
 
+                Console.ResetColor();
             } while (opcao != "S" && opcao != "N");
 
             parcelar = opcao == "S" ? true : false;
@@ -51,6 +55,9 @@ namespace projeto_pagamento
 
                 do
                 {
+                    Console.WriteLine($"");
+                    
+                    Console.ForegroundColor = ConsoleColor.DarkGreen;
                     Console.Write("Em quantas vezes voce quer paracelar (Somente até 12x): ");
                     p = int.Parse(Console.ReadLine()!);
 
@@ -61,6 +68,7 @@ namespace projeto_pagamento
                         Console.ResetColor();
                     }
 
+                    Console.ResetColor();
                 } while (p <= 0 || p > 12);
 
                 if (p == 6)
@@ -82,18 +90,23 @@ namespace projeto_pagamento
                 totalPar = compra;
             }
 
-
+            Console.WriteLine($"");
+            
+            Console.ForegroundColor = ConsoleColor.DarkCyan;
             Console.WriteLine($"Valor das parcelas com juros: {valorPar.ToString("C", new CultureInfo("pt-BR"))}");
             Console.WriteLine($"Valor total com juros: {totalPar.ToString("C", new CultureInfo("pt-BR"))}");
+            Console.ResetColor();
         }
 
         public override void Salvar()
-        {
+        {   
+            Console.WriteLine($"");
+            
             this.Bandeira = "Master";
             this.NumeroCartao = "1234567";
             this.Titular = "Murilo";
             this.Cvv = "123";
-
+            
             Console.WriteLine($"{this.Bandeira}, {this.NumeroCartao}, {this.Titular}, {this.Cvv}");
             
         }
