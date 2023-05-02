@@ -1,7 +1,10 @@
+using projeto_pagamento;
 
-﻿
+
 float ValorPago = 0;
 int Opcao = 0;
+bool limite;
+
 Console.WriteLine(@$"
 ░░░█░█░█▀█░█▀▀░█▀▀░░░█▀▀░█▀▀░▀█▀░█▀█░░░█▀█░█▀█░░░█▀█░▀█▀░█░█░█▀█░█▀█░█░█░░░░
 ░░░▀▄▀░█░█░█░░░█▀▀░░░█▀▀░▀▀█░░█░░█▀█░░░█░█░█░█░░░█▀▀░░█░░▄▀▄░█▀▀░█▀█░░█░░░░░
@@ -48,10 +51,19 @@ switch (Opcao)
         // Console.WriteLine(ValorPago);
         break;
     case 2:
-        // Console.WriteLine($"parabéns vc escolheu 2");
-        // Credito creditoNovo = new Credito();
-        // creditoNovo.Credito = ValorPago;
-        // Console.WriteLine(ValorPago);
+        Console.WriteLine($"parabéns vc escolheu 2");
+        Credito creditoNovo = new Credito();
+        creditoNovo.Valor = ValorPago;
+        limite = creditoNovo.Limitar(ValorPago);
+
+        if (limite == true) {
+           creditoNovo.Limitar(ValorPago);
+        }
+
+        else {
+            
+        }
+
         break;
     case 3:
         Console.WriteLine($"parabéns vc escolheu 3");

@@ -5,7 +5,7 @@ namespace projeto_pagamento
     public class Credito : Cartao
     {
         private float Limite = 10000f;
-
+        public float Valor;
         //  Metodos
 
         public bool Limitar(float compra)
