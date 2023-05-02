@@ -7,8 +7,6 @@ Console.WriteLine(@$"
 *    Você está no PixPay            *
 *                                   *
 *************************************");
-
-
 do
 {
     Console.ForegroundColor = ConsoleColor.DarkBlue;
@@ -16,7 +14,7 @@ do
     ValorPago = float.Parse(Console.ReadLine());
     Console.ResetColor();
 }
-while (ValorPago == 0);
+while (ValorPago <= 0);
 
 Console.ForegroundColor = ConsoleColor.DarkBlue;
 Console.ResetColor();
@@ -30,21 +28,20 @@ do
         |4|---> Cancelar Operação
         |0|---> Sair do Sistema");
     Opcao = int.Parse(Console.ReadLine());
-} while (Opcao != 1 && Opcao != 2 && Opcao != 3 && Opcao != 4 && Opcao != 0);
-Console.ResetColor();
+
 switch (Opcao)
 {
     case 1:
-        // Console.WriteLine($"parabéns vc escolheu 1");
-        Boleto boletoNovo = new Boleto();
-        boletoNovo.Boleto = ValorPago;
-        Console.WriteLine(ValorPago);
+        Console.WriteLine($"parabéns vc escolheu 1");
+        // Boleto boletoNovo = new Boleto();
+        // boletoNovo.Boleto = ValorPago;
+        // Console.WriteLine(ValorPago);
         break;
     case 2:
         // Console.WriteLine($"parabéns vc escolheu 2");
-        Credito creditoNovo = new Credito();
-        creditoNovo.Credito = ValorPago;
-        Console.WriteLine(ValorPago);
+        // Credito creditoNovo = new Credito();
+        // creditoNovo.Credito = ValorPago;
+        // Console.WriteLine(ValorPago);
         break;
     case 3:
         Console.WriteLine($"parabéns vc escolheu 3");
@@ -60,10 +57,11 @@ switch (Opcao)
         Console.WriteLine($"opcao invalida");
         break;
 }
-
+} while (Opcao != 1 && Opcao != 2 && Opcao != 3 && Opcao != 4 && Opcao != 0);
 Console.WriteLine(@$"
 *************************************
 *                                   *
 *Agradecemos por usar o PixPay*
 *                                   *
 *************************************");
+Console.ResetColor();

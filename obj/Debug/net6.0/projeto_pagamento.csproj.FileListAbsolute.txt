@@ -1,0 +1,15 @@
+C:\Users\29321863885\Desktop\claitinho da massa\projeto_pagamento\obj\Debug\net6.0\projeto_pagamento.csproj.AssemblyReference.cache
+C:\Users\29321863885\Desktop\claitinho da massa\projeto_pagamento\obj\Debug\net6.0\projeto_pagamento.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\29321863885\Desktop\claitinho da massa\projeto_pagamento\obj\Debug\net6.0\projeto_pagamento.AssemblyInfoInputs.cache
+C:\Users\29321863885\Desktop\claitinho da massa\projeto_pagamento\obj\Debug\net6.0\projeto_pagamento.AssemblyInfo.cs
+C:\Users\29321863885\Desktop\claitinho da massa\projeto_pagamento\obj\Debug\net6.0\projeto_pagamento.csproj.CoreCompileInputs.cache
+C:\Users\29321863885\Desktop\claitinho da massa\projeto_pagamento\bin\Debug\net6.0\projeto_pagamento.exe
+C:\Users\29321863885\Desktop\claitinho da massa\projeto_pagamento\bin\Debug\net6.0\projeto_pagamento.deps.json
+C:\Users\29321863885\Desktop\claitinho da massa\projeto_pagamento\bin\Debug\net6.0\projeto_pagamento.runtimeconfig.json
+C:\Users\29321863885\Desktop\claitinho da massa\projeto_pagamento\bin\Debug\net6.0\projeto_pagamento.dll
+C:\Users\29321863885\Desktop\claitinho da massa\projeto_pagamento\bin\Debug\net6.0\projeto_pagamento.pdb
+C:\Users\29321863885\Desktop\claitinho da massa\projeto_pagamento\obj\Debug\net6.0\projeto_pagamento.dll
+C:\Users\29321863885\Desktop\claitinho da massa\projeto_pagamento\obj\Debug\net6.0\refint\projeto_pagamento.dll
+C:\Users\29321863885\Desktop\claitinho da massa\projeto_pagamento\obj\Debug\net6.0\projeto_pagamento.pdb
+C:\Users\29321863885\Desktop\claitinho da massa\projeto_pagamento\obj\Debug\net6.0\projeto_pagamento.genruntimeconfig.cache
+C:\Users\29321863885\Desktop\claitinho da massa\projeto_pagamento\obj\Debug\net6.0\ref\projeto_pagamento.dll
