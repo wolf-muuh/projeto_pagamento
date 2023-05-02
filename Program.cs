@@ -40,37 +40,48 @@ Console.ForegroundColor = ConsoleColor.Red;
     
     
     ");
-    Opcao = int.Parse(Console.ReadLine());
+    Opcao = int.Parse(Console.ReadLine()!);
 
 switch (Opcao)
 {
     case 1:
-        Console.WriteLine($"parabéns vc escolheu 1");
-        // Boleto boletoNovo = new Boleto();
-        // boletoNovo.Boleto = ValorPago;
-        // Console.WriteLine(ValorPago);
+        Boleto boletoNovo = new Boleto();
+        boletoNovo.Valor = ValorPago;
+        boletoNovo.Registrar();
         break;
+
     case 2:
-        Console.WriteLine($"parabéns vc escolheu 2");
         Credito creditoNovo = new Credito();
         creditoNovo.Valor = ValorPago;
         limite = creditoNovo.Limitar(ValorPago);
 
         if (limite == true) {
-           creditoNovo.Limitar(ValorPago);
+            Console.WriteLine($"Limite do cartao ultrapassado !!!");
         }
 
         else {
-            
+            creditoNovo.Pagar(ValorPago);
+        }
+        break;
+
+    case 3:
+        Debito debitoNovo = new Debito();
+        debitoNovo.Valor = ValorPago;
+
+        limite = debitoNovo.VerificarSaldo(ValorPago);
+
+        if (limite == true) {
+           Console.WriteLine($"Saldo insuficiente !!!");
         }
 
+        else {
+            debitoNovo.Pagar(ValorPago);
+        }
         break;
-    case 3:
-        Console.WriteLine($"parabéns vc escolheu 3");
-        break;
+
     case 4:
-        // Console.WriteLine($"parabéns vc escolheu 4");
-        Opcao = 20;
+        Pagamento pagamentoNovo = new Pagamento();
+        Console.WriteLine(pagamentoNovo.Cancelar());
         break;
     case 0:
         // Console.WriteLine($"parabéns vc escolheu 0");
@@ -83,6 +94,7 @@ switch (Opcao)
         break;
 }
 } while (Opcao != 1 && Opcao != 2 && Opcao != 3 && Opcao != 4 && Opcao != 0);
+
 Console.WriteLine(@$"
 ░█▀█░█▀▀░█▀▄░█▀█░█▀▄░█▀▀░█▀▀░█▀▀░█▄█░█▀█░█▀▀░░░█▀█░█▀█░█▀▄░░░█░█░█▀▀░█▀█░█▀▄░░░█▀█░░░█▀█░▀█▀░█░█░█▀█░█▀█░█░█░░
 ░█▀█░█░█░█▀▄░█▀█░█░█░█▀▀░█░░░█▀▀░█░█░█░█░▀▀█░░░█▀▀░█░█░█▀▄░░░█░█░▀▀█░█▀█░█▀▄░░░█░█░░░█▀▀░░█░░▄▀▄░█▀▀░█▀█░░█░░░

@@ -14,7 +14,6 @@ namespace projeto_pagamento
 
             if (compra > this.Limite)
             {
-                Console.WriteLine($"Limite do cartao ultrapassado !!!");
                 l = true;
             }
 

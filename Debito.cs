@@ -3,23 +3,20 @@ namespace projeto_pagamento
 {
     public class Debito : Cartao
     {
-        private float saldo = 10000F;
+        private float Saldo = 10000F;
+        public float Valor;
 
-
-        public bool Pagamento(float valor)
+        public bool VerificarSaldo(float Valor)
         {
             bool s = false;
-            if (valor > saldo)
-            {
-
-                Console.WriteLine($"Não é possível pagar, Saldo insuficiente.");
+            if (this.Valor > Saldo) {
                 s = true;
             }
             return s;
         }
-        public override void Pagar(float compra)
+        public override void Pagar(float Valor)
         {
-            Console.WriteLine($"o valor a ser pago é {compra}");
+            Console.WriteLine($"o valor a ser pago é {Valor:C2}");
         }
         public override void Salvar()
         {
