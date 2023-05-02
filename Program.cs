@@ -4,4 +4,12 @@ Credito a = new Credito();
 
 float valor = 1000f;
 
-a.Parcelar(valor);
+bool x = a.Limitar(valor);
+
+if (x == true) {
+    Console.WriteLine($"{x}");
+}
+
+else {
+    a.Parcelar(valor);
+}

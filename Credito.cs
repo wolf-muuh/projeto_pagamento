@@ -7,7 +7,7 @@ namespace projeto_pagamento
         private float Limite = 10000f;
 
         //  Metodos
-         public void Parcelar(float compra) {
+        public void Parcelar(float compra) {
             bool parcelar = false;
             int p = 0;
             float valorPar = 0, totalPar = 0;
@@ -26,12 +26,21 @@ namespace projeto_pagamento
                 }
             } while(opcao != "S" && opcao != "N");
 
-
             parcelar = opcao == "S" ? true : false;
 
             if (parcelar == true) {
-                Console.Write("Em quantas vezes voce quer paracelar (Somente até 12x): ");
-                p = int.Parse(Console.ReadLine()!);
+
+                do {
+                    Console.Write("Em quantas vezes voce quer paracelar (Somente até 12x): ");
+                    p = int.Parse(Console.ReadLine()!);
+
+                    if (p <= 0 || p > 12) {
+                        Console.BackgroundColor = ConsoleColor.DarkRed;
+                        Console.WriteLine($"ERRO, apenas parcelamos de 1 a 12x !!!");
+                        Console.ResetColor();
+                    }
+
+                } while (p <= 0 || p > 12);
 
                 if (p == 6) {
                     valorPar = compra * (1 + 0.05f) / p;
@@ -43,11 +52,26 @@ namespace projeto_pagamento
                     totalPar = valorPar * p;
                 }
             }
-
-                Console.WriteLine($"Valor das parcelas com {p}% de juros: {valorPar.ToString("C", new CultureInfo("pt-BR"))}");    
-                Console.WriteLine($"Valor total com juros: {totalPar.ToString("C", new CultureInfo("pt-BR"))}");    
             
-         }
+            else {
+                valorPar = 0;
+                totalPar = compra;
+            }
 
+
+            Console.WriteLine($"Valor das parcelas com juros: {valorPar.ToString("C", new CultureInfo("pt-BR"))}");    
+            Console.WriteLine($"Valor total com juros: {totalPar.ToString("C", new CultureInfo("pt-BR"))}");    
+         }
+        
+        public bool Limitar(float compra) {
+            bool l = false;
+
+            if (compra > this.Limite) {
+                Console.WriteLine($"Limite do cartao ultrapassado !!!");
+                l = true;
+            }
+        
+            return l;
+        }
     }
 }
