@@ -5,11 +5,13 @@ float ValorPago = 0;
 string Opcao = "";
 bool limite;
 
+Console.BackgroundColor = ConsoleColor.DarkBlue;
 Console.WriteLine(@$"
 ░░░█░█░█▀█░█▀▀░█▀▀░░░█▀▀░█▀▀░▀█▀░█▀█░░░█▀█░█▀█░░░█▀█░▀█▀░█░█░█▀█░█▀█░█░█░░░░
 ░░░▀▄▀░█░█░█░░░█▀▀░░░█▀▀░▀▀█░░█░░█▀█░░░█░█░█░█░░░█▀▀░░█░░▄▀▄░█▀▀░█▀█░░█░░░░░
 ░░░░▀░░▀▀▀░▀▀▀░▀▀▀░░░▀▀▀░▀▀▀░░▀░░▀░▀░░░▀░▀░▀▀▀░░░▀░░░▀▀▀░▀░▀░▀░░░▀░▀░░▀░░░░░
 ");
+Console.ResetColor();
 do {
     do {
         Console.ForegroundColor = ConsoleColor.DarkBlue;
@@ -19,6 +21,13 @@ do {
                 *************************************");
         Console.Write("     -> ");
         ValorPago = float.Parse(Console.ReadLine()!);
+
+        if ( ValorPago <= 0) {
+            Console.ForegroundColor = ConsoleColor.DarkRed;
+            Console.WriteLine($"ERRO, apenas valores MAIORES que 0 !!!");
+            Console.ResetColor();
+            Console.Beep(550, 500);
+        }
         Console.ResetColor();
     } while (ValorPago <= 0);
 
@@ -81,17 +90,20 @@ do {
         Console.WriteLine($"***********************");
         
         if (limite == true) {
-            Console.WriteLine($"Limite do cartao ultrapassado !!!");
+            Console.WriteLine(@$"
+            *************************************
+            * Limite do cartao ultrapassado !!! *
+            *************************************
+            ");
         }
 
         else {
-            creditoNovo.Pagar(ValorPago);
+            creditoNovo.Salvar();
             
             Console.WriteLine($"");
 
-            creditoNovo.Salvar();
+            creditoNovo.Pagar(ValorPago);
         }
-
         break;
 
     case "3":
@@ -127,23 +139,28 @@ do {
         Console.WriteLine($"***********************");
 
         if (limite == true) {
-           Console.WriteLine($"Saldo insuficiente !!!");
+           Console.WriteLine(@$"
+           **************************
+           * Saldo insuficiente !!! *
+           **************************
+           ");
         }
 
         else {
             Console.WriteLine($"");
             
-            debitoNovo.Pagar(ValorPago);
+            debitoNovo.Salvar();
 
             Console.WriteLine($"");
             
-            debitoNovo.Salvar();
+            debitoNovo.Pagar(ValorPago);
         }
         break;
 
     case "4":
         Pagamento pagamentoNovo = new Pagamento();
         Console.WriteLine(pagamentoNovo.Cancelar());
+        Console.Beep(550, 500);
         Thread.Sleep(1000);
         Opcao = "";
         Console.Clear();
@@ -153,11 +170,12 @@ do {
         break;
 
     default:
-        Console.Beep(1200, 2000);
+        Console.Beep(3000, 500);
         Console.WriteLine(@$"
-             *************************************
-             *        Opcao invalida             *
-             *************************************");
+        *************************************
+        *            Opcao invalida          *
+        *************************************");
+        Thread.Sleep(1000);
         break;
 }
 
@@ -166,18 +184,18 @@ do {
 
 Thread.Sleep(1000);
 
-Console.Beep(1000, 500);
-Console.Beep(2000, 500);
-Console.Beep(3000, 500);
+Console.Beep(1000, 300);
+Console.Beep(2000, 300);
+Console.Beep(3000, 150);
+Console.Beep(250, 400);
 
 Thread.Sleep(1000);
 
+Console.ForegroundColor = ConsoleColor.DarkGreen;
 Console.WriteLine(@$"
 ░█▀█░█▀▀░█▀▄░█▀█░█▀▄░█▀▀░█▀▀░█▀▀░█▄█░█▀█░█▀▀░░░█▀█░█▀█░█▀▄░░░█░█░█▀▀░█▀█░█▀▄░░░█▀█░░░█▀█░▀█▀░█░█░█▀█░█▀█░█░█░░
 ░█▀█░█░█░█▀▄░█▀█░█░█░█▀▀░█░░░█▀▀░█░█░█░█░▀▀█░░░█▀▀░█░█░█▀▄░░░█░█░▀▀█░█▀█░█▀▄░░░█░█░░░█▀▀░░█░░▄▀▄░█▀▀░█▀█░░█░░░
-░▀░▀░▀▀▀░▀░▀░▀░▀░▀▀░░▀▀▀░▀▀▀░▀▀▀░▀░▀░▀▀▀░▀▀▀░░░▀░░░▀▀▀░▀░▀░░░▀▀▀░▀▀▀░▀░▀░▀░▀░░░▀▀▀░░░▀░░░▀▀▀░▀░▀░▀░░░▀░▀░░▀░░░
-");
-
+░▀░▀░▀▀▀░▀░▀░▀░▀░▀▀░░▀▀▀░▀▀▀░▀▀▀░▀░▀░▀▀▀░▀▀▀░░░▀░░░▀▀▀░▀░▀░░░▀▀▀░▀▀▀░▀░▀░▀░▀░░░▀▀▀░░░▀░░░▀▀▀░▀░▀░▀░░░▀░▀░░▀░░░");
 
 Console.ResetColor();
 

@@ -11,7 +11,7 @@ namespace projeto_pagamento
             Random codigodebarras = new Random();
             double UltDigitos = Valor*0.88;
 
-            Console.Beep(2000, 300);
+            Console.Beep(2530, 300);
 
             Console.ForegroundColor = ConsoleColor.DarkBlue;
             Console.WriteLine(@$"

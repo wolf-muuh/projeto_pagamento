@@ -93,7 +93,7 @@ namespace projeto_pagamento
 
             Console.WriteLine($"");
             
-            Console.Beep(2000, 300);
+            Console.Beep(2530, 300);
 
             Console.ForegroundColor = ConsoleColor.DarkCyan;
             Console.WriteLine($"*****************************************");
@@ -108,7 +108,7 @@ namespace projeto_pagamento
             Console.ForegroundColor = ConsoleColor.DarkCyan;
             Console.WriteLine(@$"
 ************************
-*     INFO DO CARTÃO   *
+*    INFO DO CARTÃO    *
 ************************
 * Bandeira: {this.Bandeira}
 * Numero do cartão: {this.NumeroCartao}

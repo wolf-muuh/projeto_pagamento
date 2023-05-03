@@ -17,7 +17,7 @@ namespace projeto_pagamento
         }
         public override void Pagar(float Valor)
         {
-            Console.Beep(2000, 300);
+            Console.Beep(2530, 300);
             Console.ForegroundColor = ConsoleColor.DarkMagenta;
             Console.WriteLine($"*****************************************");
             Console.WriteLine($"*     Valor a ser pago é {Valor.ToString("C", new CultureInfo("pt-BR"))}          *");
@@ -29,7 +29,7 @@ namespace projeto_pagamento
             Console.ForegroundColor = ConsoleColor.DarkMagenta;
             Console.WriteLine(@$"
 ************************
-*     INFO DO CARTÃO   *
+*    INFO DO CARTÃO    *
 ************************
 * Bandeira: {this.Bandeira}
 * Numero do cartão: {this.NumeroCartao}
