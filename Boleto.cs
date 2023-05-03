@@ -9,6 +9,7 @@ namespace projeto_pagamento
         public void Registrar()
         {
             Random codigodebarras = new Random();
+            double UltDigitos = Valor*0.88;
 
             Console.ForegroundColor = ConsoleColor.DarkBlue;
             Console.WriteLine(@$"
@@ -17,7 +18,7 @@ namespace projeto_pagamento
             
             * Segue o boleto:
 
-            * 34191.{codigodebarras.Next(90000)} {codigodebarras.Next(90000)}.{codigodebarras.Next(900000)} {codigodebarras.Next(90000)}.{codigodebarras.Next(900000)} 3 {codigodebarras.Next(900000000)}000{Math.Round(Valor*0.88)}
+            * 34191.{codigodebarras.Next(90000)} {codigodebarras.Next(90000)}.{codigodebarras.Next(900000)} {codigodebarras.Next(90000)}.{codigodebarras.Next(900000)} 3 {codigodebarras.Next(900000000)}000{(UltDigitos).ToString().Replace(".", "")}
 
 
             * O boleto tem vencimento no dia {Data}
