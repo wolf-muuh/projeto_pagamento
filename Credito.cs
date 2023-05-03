@@ -93,6 +93,8 @@ namespace projeto_pagamento
 
             Console.WriteLine($"");
             
+            Console.Beep(2000, 300);
+
             Console.ForegroundColor = ConsoleColor.DarkCyan;
             Console.WriteLine($"*****************************************");
             Console.WriteLine(valorPar == 0 ? $"* Não será utilizado parcelas" : $"* Valor das parcelas com juros: {valorPar.ToString("C", new CultureInfo("pt-BR"))}");
