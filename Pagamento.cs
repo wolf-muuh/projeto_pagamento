@@ -7,7 +7,14 @@ namespace projeto_pagamento
 
         public string Cancelar()
         {
-            return "Pagamento cancelado com sucesso";
+            // Zera valor das propriedades
+            this.Data = new DateTime();
+            this.Valor = 0;
+            return @"
+            ***********************************
+            * Pagamento cancelado com sucesso * 
+            ***********************************
+            ";
         }
     }
 }

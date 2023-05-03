@@ -57,11 +57,13 @@ namespace projeto_pagamento
                     Console.WriteLine($"");
                     
                     Console.ForegroundColor = ConsoleColor.DarkGreen;
-                    Console.Write("Em quantas vezes voce quer paracelar (Somente até 12x): ");
+                    Console.Write("Em quantas vezes voce quer parcelar (Somente até 12x): ");
                     p = int.Parse(Console.ReadLine()!);
 
                     if (p <= 0 || p > 12)
                     {
+                        Console.WriteLine($"");
+                        
                         Console.BackgroundColor = ConsoleColor.DarkRed;
                         Console.WriteLine($"ERRO, apenas parcelamos de 1 a 12x !!!");
                         Console.ResetColor();
@@ -92,22 +94,27 @@ namespace projeto_pagamento
             Console.WriteLine($"");
             
             Console.ForegroundColor = ConsoleColor.DarkCyan;
-            Console.WriteLine($"Valor das parcelas com juros: {valorPar.ToString("C", new CultureInfo("pt-BR"))}");
-            Console.WriteLine($"Valor total com juros: {totalPar.ToString("C", new CultureInfo("pt-BR"))}");
+            Console.WriteLine($"*****************************************");
+            Console.WriteLine(valorPar == 0 ? $"* Não será utilizado parcelas" : $"* Valor das parcelas com juros: {valorPar.ToString("C", new CultureInfo("pt-BR"))}");
+            Console.WriteLine($"* Valor total com juros: {totalPar.ToString("C", new CultureInfo("pt-BR"))}");
+            Console.WriteLine($"*****************************************");
             Console.ResetColor();
         }
 
         public override void Salvar()
         {   
-            Console.WriteLine($"");
-            
-            this.Bandeira = "Master";
-            this.NumeroCartao = "1234567";
-            this.Titular = "Murilo";
-            this.Cvv = "123";
-            
-            Console.WriteLine($"{this.Bandeira}, {this.NumeroCartao}, {this.Titular}, {this.Cvv}");
-            
+            Console.ForegroundColor = ConsoleColor.DarkCyan;
+            Console.WriteLine(@$"
+************************
+*     INFO DO CARTÃO   *
+************************
+* Bandeira: {this.Bandeira}
+* Numero do cartão: {this.NumeroCartao}
+* Titular: {this.Titular}
+* CVV: {this.Cvv}
+************************
+            ");
+            Console.ResetColor();
         }
     }
 }

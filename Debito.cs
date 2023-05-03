@@ -1,3 +1,4 @@
+using System.Globalization;
 
 namespace projeto_pagamento
 {
@@ -16,17 +17,26 @@ namespace projeto_pagamento
         }
         public override void Pagar(float Valor)
         {
-            Console.WriteLine($"o valor a ser pago é {Valor:C2}");
+            Console.ForegroundColor = ConsoleColor.DarkMagenta;
+            Console.WriteLine($"*****************************************");
+            Console.WriteLine($"*     Valor a ser pago é {Valor.ToString("C", new CultureInfo("pt-BR"))}          *");
+            Console.WriteLine($"*****************************************");
+            Console.ResetColor();
         }
         public override void Salvar()
         {
-            this.Bandeira = "master";
-            this.NumeroCartao = "1234567";
-            this.Titular = "Murilo";
-            this.Cvv = "123";
-
-            Console.WriteLine($"{Bandeira} {NumeroCartao} {Titular} {Cvv}");
-
+            Console.ForegroundColor = ConsoleColor.DarkMagenta;
+            Console.WriteLine(@$"
+************************
+*     INFO DO CARTÃO   *
+************************
+* Bandeira: {this.Bandeira}
+* Numero do cartão: {this.NumeroCartao}
+* Titular: {this.Titular}
+* CVV: {this.Cvv}
+************************
+            ");
+            Console.ResetColor();
         }
     }
 }
