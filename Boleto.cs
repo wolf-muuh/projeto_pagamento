@@ -16,7 +16,7 @@ namespace projeto_pagamento
             Console.ForegroundColor = ConsoleColor.DarkBlue;
             Console.WriteLine(@$"
             ***************************************************************************************************************************
-            * O Valor a ser pago com desconto será de R${Valor*0.88:N2}                                                                                                        
+            * O Valor a ser pago com desconto de 12%, será de R${Valor*0.88:N2}                                                                                                        
             
             * Segue o boleto:
 
