@@ -12,6 +12,8 @@ Console.WriteLine(@$"
 ░░░░▀░░▀▀▀░▀▀▀░▀▀▀░░░▀▀▀░▀▀▀░░▀░░▀░▀░░░▀░▀░▀▀▀░░░▀░░░▀▀▀░▀░▀░▀░░░▀░▀░░▀░░░░░
 ");
 Console.ResetColor();
+
+do {
 do {
     do {
         Console.ForegroundColor = ConsoleColor.DarkBlue;
@@ -181,6 +183,8 @@ do {
 
 
 } while (Opcao != "1" && Opcao != "2" && Opcao != "3" && Opcao != "4" && Opcao != "0");
+} while(Opcao != "0");
+
 
 Thread.Sleep(1000);
 
@@ -191,6 +195,8 @@ Console.Beep(250, 400);
 
 Thread.Sleep(1000);
 
+Console.Clear();
+
 Console.ForegroundColor = ConsoleColor.DarkGreen;
 Console.WriteLine(@$"
 ░█▀█░█▀▀░█▀▄░█▀█░█▀▄░█▀▀░█▀▀░█▀▀░█▄█░█▀█░█▀▀░░░█▀█░█▀█░█▀▄░░░█░█░█▀▀░█▀█░█▀▄░░░█▀█░░░█▀█░▀█▀░█░█░█▀█░█▀█░█░█░░
@@ -198,4 +204,3 @@ Console.WriteLine(@$"
 ░▀░▀░▀▀▀░▀░▀░▀░▀░▀▀░░▀▀▀░▀▀▀░▀▀▀░▀░▀░▀▀▀░▀▀▀░░░▀░░░▀▀▀░▀░▀░░░▀▀▀░▀▀▀░▀░▀░▀░▀░░░▀▀▀░░░▀░░░▀▀▀░▀░▀░▀░░░▀░▀░░▀░░░");
 
 Console.ResetColor();
-
