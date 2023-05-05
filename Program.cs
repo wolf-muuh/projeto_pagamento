@@ -13,7 +13,7 @@ Console.WriteLine(@$"
 ");
 Console.ResetColor();
 
-do {
+while (Opcao != "0" && Opcao != "N") {
 do {
     do {
         Console.ForegroundColor = ConsoleColor.DarkBlue;
@@ -181,9 +181,28 @@ do {
         break;
 }
 
+if (Opcao != "0") {
+    do {
+        Console.WriteLine($"");
+        
+        Console.BackgroundColor = ConsoleColor.White;
+        Console.Write("Voce quer fazer mais uma operação ? [S/N]:");
+        Console.ResetColor();
+        Opcao = Console.ReadLine()!.ToUpper();       
 
-} while (Opcao != "1" && Opcao != "2" && Opcao != "3" && Opcao != "4" && Opcao != "0");
-} while(Opcao != "0");
+        if (Opcao != "S" && Opcao != "N") {
+            Console.WriteLine($"");
+            
+            Console.BackgroundColor = ConsoleColor.DarkRed;
+            Console.WriteLine($"ERRO, apenas S ou N");
+            Console.ResetColor();
+        }
+
+    } while(Opcao != "S" && Opcao != "N");
+}
+
+} while (Opcao != "1" && Opcao != "2" && Opcao != "3" && Opcao != "4" && Opcao != "0" && Opcao != "N");
+} 
 
 
 Thread.Sleep(1000);
