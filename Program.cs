@@ -186,6 +186,7 @@ if (Opcao != "0") {
         Console.WriteLine($"");
         
         Console.BackgroundColor = ConsoleColor.White;
+        Console.ForegroundColor = ConsoleColor.Black;
         Console.Write("Voce quer fazer mais uma operação ? [S/N]:");
         Console.ResetColor();
         Opcao = Console.ReadLine()!.ToUpper();       
